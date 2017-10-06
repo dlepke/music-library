@@ -61,7 +61,7 @@ function totalDuration(playlist) {
     for (let track in playlist.tracks) {
         sum += playlist.tracks[track].length;
     }
-    playlist.overallRating = sum;
+    playlist.totalDuration = sum;
 }
 
 function overallRating(playlist) {
@@ -69,7 +69,7 @@ function overallRating(playlist) {
     for (let track in playlist.tracks) {
         sum += playlist.tracks[track].rating;
     }
-   playlist.totalDuration = sum;
+   playlist.overallRating = sum / playlist.tracks.length;
 }
 
 console.log(myLibrary);
